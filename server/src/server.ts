@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./db/db.js";
 import authRouter from "./routes/authRoutes.js";
+import quizRouter from "./routes/quizRoutes.js";
+import globalErrorHandler from "./middlewares/globalErrorHandler.js";
 
 //getting the env files
 dotenv.config();
@@ -23,6 +25,9 @@ app.use(
 
 //routes
 app.use("/api/auth", authRouter);
+app.use("/api/quizzes", quizRouter);
+
+app.use(globalErrorHandler);
 
 const port = process.env.PORT || 4000;
 
