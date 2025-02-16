@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 type Buttonprops = {
   children: ReactNode;
   onClick?: () => void;
-  className: string;
+  className?: string;
 };
 
 const Button = ({ children, onClick, className }: Buttonprops) => {
