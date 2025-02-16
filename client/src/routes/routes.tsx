@@ -1,3 +1,4 @@
+import CreateQuiz from "@/pages/CreateQuiz.js";
 import Dashboard from "@/pages/Dashboard.js";
 import Login from "@/pages/Login.js";
 import React from "react";
@@ -9,6 +10,7 @@ export default function AppRoutes() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/create" element={<CreateQuiz />} />
       </Routes>
     </Router>
   );

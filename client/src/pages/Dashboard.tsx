@@ -14,6 +14,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 const Dashboard = () => {
   const [quizzes, setQuizzes] = useState<Quiz[]>([]);
+  console.log(quizzes);
 
   useEffect(() => {
     const getAllQuizzes = async () => {
