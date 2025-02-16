@@ -33,7 +33,7 @@ const Dashboard = () => {
       <Link to={"/create"}>
         <Button className="mb-4 cursor-pointer">Create New Quiz</Button>
       </Link>
-      <div>
+      <div className="grid grid-cols-2 gap-5">
         {quizzes?.map((quiz) => (
           <div key={quiz.id} className="p-4 border rounded-lg shadow">
             <h2 className="text-xl font-semibold">{quiz.title}</h2>
@@ -43,10 +43,10 @@ const Dashboard = () => {
             </p>
             <div className="flex gap-2 mt-2">
               <Link to={`/edit/${quiz.id}`}>
-                <Button className="curosor-pointer">Edit</Button>
+                <Button className="cursor-pointer">Edit</Button>
               </Link>
               <Button
-                className="pointer"
+                className="cursor-pointer"
                 onClick={() => console.log("Delete logic here")}
               >
                 Delete
