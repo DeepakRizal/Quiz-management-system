@@ -26,7 +26,10 @@ export const login = catchAsync(
       }
 
       res.status(200).json({
-        message: "Login successful.",
+        status: "success",
+        data: {
+          user,
+        },
       });
     } catch (error) {
       return next(new AppError("Database error", 500));
